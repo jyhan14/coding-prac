@@ -1,11 +1,10 @@
 function solution(n) {
-    let str = String(n).split("");
-    
     let sum = 0;
-    for(let s of str){
-        let n = Number(s);
-        sum += n;
+
+    while (n > 0) {
+        sum += n % 10;
+
+        n = Math.floor(n / 10);
     }
-    
     return sum;
 }
